@@ -1,0 +1,108 @@
+// Auto-generated prebuilt Blueprint for external/eigen
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.eigen
+
+package {
+    default_applicable_licenses: ["external_eigen_license"],
+}
+
+license {
+    name: "external_eigen_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-MPL-2.0",
+    ],
+    license_text: [
+        "COPYING.APACHE",
+        "COPYING.BSD",
+        "COPYING.MINPACK",
+        "COPYING.MPL2",
+        "NOTICE",
+    ],
+}
+
+license {
+    name: "eigen_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-MPL-2.0",
+    ],
+    license_text: [
+        "COPYING.APACHE",
+        "COPYING.BSD",
+        "COPYING.MINPACK",
+        "COPYING.MPL2",
+        "NOTICE",
+    ],
+}
+
+cc_library_headers {
+    name: "libeigen",
+    export_include_dirs: [
+        ".",
+        "include",
+        "include/eigen3",
+    ],
+    cflags: ["-DEIGEN_MPL2_ONLY"],
+    vendor_available: true,
+    host_supported: true,
+    apex_available: [
+        "com.android.neuralnetworks",
+        "test_com.android.neuralnetworks",
+        "//apex_available:platform",
+        "com.android.ondevicepersonalization",
+    ],
+    min_sdk_version: "apex_inherit",
+    sdk_version: "current",
+}
+
+cc_prebuilt_library {
+    name: "libF77blas",
+    vendor_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: ["include"],
+    static: {
+        srcs: ["lib/libF77blas.a"],
+    },
+    shared: {
+        srcs: ["lib/libF77blas.so"],
+    },
+    prefer: true,
+    min_sdk_version: "29",
+}
+
+cc_prebuilt_library {
+    name: "libF77blasV8",
+    vendor_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: ["include"],
+    static: {
+        srcs: ["lib/libF77blasV8.a"],
+    },
+    shared: {
+        srcs: ["lib/libF77blasV8.so"],
+    },
+    prefer: true,
+    min_sdk_version: "29",
+}
+
+cc_prebuilt_library {
+    name: "libeigen_blas",
+    vendor_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: ["include"],
+    static: {
+        srcs: ["lib/libeigen_blas_static.a"],
+    },
+    shared: {
+        srcs: ["lib/libeigen_blas.so"],
+    },
+    prefer: true,
+    min_sdk_version: "29",
+}

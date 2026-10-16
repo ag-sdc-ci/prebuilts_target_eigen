@@ -1,0 +1,25 @@
+{
+	"provideLibs": [	
+		    "libF77blasV8-x86_64-v2.so",
+		    "libF77blasV8.so",
+		    "libdummy_binary_libF77blas-x86_64-v2.so.so",
+		    "libdummy_binary_libF77blas.a-x86_64-v2.so",
+		    "libdummy_binary_libF77blas.a.so",
+		    "libdummy_binary_libF77blas.so.so",
+		    "libdummy_ext_eigen-x86_64-v2.so",
+		    "libdummy_ext_eigen.so",
+		    "libdummy_headers_ext_eigen-x86_64-v2.so",
+		    "libdummy_headers_ext_eigen.so",
+		    "libdummy_shared_eigen3-x86_64-v2.so",
+		    "libdummy_shared_eigen3.so",
+		    "libeigen_blas-x86_64-v2.so",
+		    "libeigen_blas.so"
+	],
+	"requireLibs": [	
+		    "libc++_shared.so",
+		    "libc.so",
+		    "libdl.so",
+		    "libm.so"
+	],
+	"visible": true
+}
