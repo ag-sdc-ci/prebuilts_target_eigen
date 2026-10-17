@@ -98,7 +98,7 @@ cc_prebuilt_library {
     check_elf_files: false,
     export_include_dirs: ["include"],
     static: {
-        srcs: ["lib/libeigen_blas_static.a"],
+        srcs: ["lib/libeigen_blas.a"],
     },
     shared: {
         srcs: ["lib/libeigen_blas.so"],
